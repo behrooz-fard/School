@@ -6,15 +6,16 @@
 package school;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
- * 9512029
- * 9512034 +
- * 9412301
- * 9512026
- * 9512021
- * 9427060
+ * 9512029 2
+ * 9512034 2+
+ * 9412301 2+
+ * 9512025 2
+ * 9512021 1
+ * 9427060 1
  * @author behrooz 9413022
  */
 public class School {
@@ -33,8 +34,39 @@ public class School {
     public static void init(ArrayList<Class> classes,
             ArrayList<Teacher> teachers,
             ArrayList<Student> students) {
+        Scanner console = new Scanner(System.in);
+      
+        /*
         
-        students.add(new Student("9111002", "math",
+        */
+        int s=1;
+        while (s==1){
+            System.out.println("Enter stdnum");
+            String stdnum = console.next();
+            System.out.println("Enter major");
+            String major = console.next();
+            System.out.println("Enter classnum");
+            int classnum = console.nextInt();
+            System.out.println("Enter first name");
+            String firstname = console.next();
+            System.out.println("Enter family name");
+            String familyname = console.next();
+            System.out.println("Enter national id ");
+            String nationalid = console.next();
+            System.out.println("Enter gender");
+            String gender= console.next();
+            System.out.println("Enter birthyear");
+            int birthyear = console.nextInt();
+            students.add(new Student(stdnum, major, classnum, firstname,
+                    familyname, nationalid,gender, birthyear));
+            System.out.println("your information were added successfully");
+            System.out.println("want to add new student? 1 to continue, others "
+                    + "to stop");
+            s = console.nextInt();
+        }
+        
+        
+       /* students.add(new Student("9111002", "math",
                 101, "Hassan",
                 "Hassani", "0020344342",
                 "man", 1998));
@@ -57,7 +89,7 @@ public class School {
         students.add(new Student("9111002", "math",
                 101, "Heshmat",
                 "Heshmati", "0020344342",
-                "man", 1998));
+                "man", 1998));*/
         
         teachers.add(new Teacher("9011032", "math",
                 "Mehdi", "Ghatee",

@@ -60,5 +60,11 @@ public class Student extends Human {
     public void setClassNum(int classNum) {
         this.classNum = classNum;
     }
+
+    @Override
+    public String getName(String gender) {
+        return "Student " + gender + " " + this.getName();
+    }
+    
     
 }

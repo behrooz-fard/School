@@ -33,17 +33,26 @@ public class Class {
         System.out.println("Teachers: ");
         for (int i = 0; i < teachers.size(); i++) {
             
-            System.out.println(teachers.get(i).getName()
+            System.out.println(
+                    teachers.get(i).getName(teachers.get(i).getGender())
                     + "  " + 
                     teachers.get(i).getFamilyName());
         }
         System.out.println("Students: ");
         for (int i = 0; i < students.size(); i++) {
             
-            System.out.println(students.get(i).getName()
+            System.out.println(
+                    students.get(i).getName(students.get(i).getGender())
                     + "  " + 
                     students.get(i).getFamilyName());
         }
     }
+
+    @Override
+    public String toString() {
+        return "Class{" + "students=" + students + ", teachers=  " + teachers + ", classID=" + classID + '}';
+    }
+    
+    
     
 }
